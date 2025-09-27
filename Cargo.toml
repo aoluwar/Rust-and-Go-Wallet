@@ -1,0 +1,20 @@
+[package]
+name = "rust-wallet"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+anyhow = "1.0"
+rand = "0.8"
+hex = "0.4"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Crypto and wallet crates
+bip39 = { version = "2.2", features = ["std", "rand"] }
+bip32 = { version = "0.5", features = ["secp256k1"] }
+k256 = { version = "0.13", features = ["ecdsa", "pkcs8"] }
+secp256k1 = { version = "0.27", features = ["recovery"] }
+tiny-keccak = { version = "2.0", features = ["keccak"] }
+sha3 = "0.10"
